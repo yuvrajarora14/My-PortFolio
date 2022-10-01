@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #262626;
+}
+
+#d1 {
+    font-size: 30px;
+    font-family: sans-serif;
+    font-style: oblique;
+    color: red;
+    background: cyan;
+}
+
+.clockCircle {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    right: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+    /* <--- doubt in this */
+    width: 200px;
+    height: 200px;
+    border: 15px solid #ff5f5f;
+    border-radius: 50%;
+    background: pink;
+}
+
+.clockCircle .img {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.clockCircle::before {
+    content: '';
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    width: 25%;
+    height: 6px;
+    background: white;
+    border-radius: 3px;
+    animation-name: animate;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transform-origin: right;
+}
+
+@keyframes animate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.clockCircle::after {
+    content: '';
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    width: 40%;
+    height: 6px;
+    background: white;
+    border-radius: 3px;
+    animation-name: animate;
+    animation-duration: 24s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transform-origin: right;
+}
+
+@keyframes animate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.clockSquare {
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    right: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+    /* <--- doubt in this */
+    width: 200px;
+    height: 200px;
+    border: 15px solid #ff5f5f;
+    background: green;
+}
+
+.clockSquare::before {
+    content: '';
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    width: 25%;
+    height: 6px;
+    background: white;
+    border-radius: 3px;
+    animation-name: animate;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transform-origin: right;
+}
+
+@keyframes animate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.clockSquare::after {
+    content: '';
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    width: 40%;
+    height: 6px;
+    background: white;
+    border-radius: 3px;
+    animation-name: animate;
+    animation-duration: 24s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transform-origin: right;
+}
+
+@keyframes animate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
